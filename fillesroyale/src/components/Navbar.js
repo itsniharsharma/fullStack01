@@ -85,7 +85,11 @@ export default function Navbar() {
 
       </div>
 
-
+ 
+       
+      <div className="bagIcon">
+              <i className="fas fa-shopping-bag"></i>
+            </div>
 
        <div className='searchEle'>
        <form className="d-flex" role="search">
@@ -93,10 +97,6 @@ export default function Navbar() {
         <button className="btn btn-outline-success" type="submit">Search</button>
       </form>
        </div>
-
-       <div className="bagIcon">
-              <i className="fas fa-shopping-bag"></i>
-            </div>
      
     </div>
   </div>
