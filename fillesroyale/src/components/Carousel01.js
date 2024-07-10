@@ -5,16 +5,16 @@ import car013 from '../img/newcar01img.webp'
 
 export default function Carousel01() {
   return (
-    <div>
-        <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
+    <div className='carousel'>
+        <div id="carouselExampleInterval" className="carousel slide carousel-fade" data-bs-ride="carousel">
   <div className="carousel-inner">
-    <div className="carousel-item active" data-bs-interval="10000">
+    <div className="carousel-item active" data-bs-interval="1000">
       <img src={car011} className="d-block w-100" alt="..."/>
     </div>
-    <div className="carousel-item" data-bs-interval="2000">
+    <div className="carousel-item" data-bs-interval="1000">
       <img src={car012} className="d-block w-100" alt="..."/>
     </div>
-    <div className="carousel-item">
+    <div className="carousel-item" data-bs-interval="1000">
       <img src={car013} className="d-block w-100" alt="..."/>
     </div>
   </div>

@@ -1,0 +1,9 @@
+.carousel {
+    height: 100px; /* Adjusting the height as needed */
+    margin-bottom: 20px;
+  }
+
+.carousel img {
+    height: 100%;
+    object-fit: cover; /* Maintaining aspect ratio and cover the container */
+  }
