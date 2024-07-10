@@ -83,8 +83,8 @@ export default function Navbar() {
 
         <div className='Logns'>
 
-        <Link class="nav-link active" aria-current="page" to="#">Login</Link>
-        <Link class="nav-link active" aria-current="page" to="#">SignUp</Link>
+        <li><Link className="nav-link active" aria-current="page" to="/login">Login</Link></li>
+        <li><Link className="nav-link active" aria-current="page" to="/signup">SignUp</Link></li>
 
         </div>
 

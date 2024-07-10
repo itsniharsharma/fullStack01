@@ -3,9 +3,11 @@ import './App.css';
 import Home from './pages/Home';
 import {
   BrowserRouter as Router,
-  Routes, 
+  Routes,
   Route,
 } from "react-router-dom";
+import Login from './pages/Login/Login';
+
 
 
 function App() {
@@ -13,10 +15,12 @@ function App() {
     <Router>
       <div>
         <Routes>
-           <Route exact path="/" element={<Home/>}></Route>
+           <Route exact path="/" element={<Home/>} />
+           <Route exact path="/login" element={<Login/>}/>
         </Routes>
       </div>
     </Router>
+
   );
 }
 
