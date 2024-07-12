@@ -1,6 +1,7 @@
 import React from 'react'
 import CollNavbar from '../collagewear/CollNavbar.js';
 import '../collagewear/CollagewearCSS/Trendy.css';
+import OfferCarousalForTrendy from '../collagewear/CollagewearCSS/CollageWearImgs/OfferCarousalTrendy.webp';
 
 export default function Trendy() {
   return (
@@ -10,6 +11,21 @@ export default function Trendy() {
 
 <CollNavbar />
 
+
+
+<div id="carouselExampleSlidesOnly" className="carousel-custom" data-bs-ride="carousel">
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img src={OfferCarousalForTrendy} className="d-block w-100" alt="OfferImages"/>
+    </div>
+    <div className="carousel-item">
+      <img src={OfferCarousalForTrendy} className="d-block w-100" alt="..."/>
+    </div>
+    <div className="carousel-item">
+      <img src={OfferCarousalForTrendy} className="d-block w-100" alt="..."/>
+    </div>
+  </div>
+</div>
 
 
 

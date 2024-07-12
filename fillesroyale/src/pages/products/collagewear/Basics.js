@@ -1,6 +1,7 @@
 import React from 'react';
 import CollNavbar from '../collagewear/CollNavbar.js';
 import '../collagewear/CollagewearCSS/Basic.css';
+import OfferCarousalForBasic from '../collagewear/CollagewearCSS/CollageWearImgs/BasicSampleCar.webp';
 
 export default function Basics() {
   return (
@@ -10,6 +11,22 @@ export default function Basics() {
 
 
       <CollNavbar />
+
+
+
+      <div id="carouselExampleSlidesOnly" className="carousel-custom" data-bs-ride="carousel">
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img src={OfferCarousalForBasic} className="d-block w-100" alt="OfferImages"/>
+    </div>
+    <div className="carousel-item">
+      <img src={OfferCarousalForBasic} className="d-block w-100" alt="..."/>
+    </div>
+    <div className="carousel-item">
+      <img src={OfferCarousalForBasic} className="d-block w-100" alt="..."/>
+    </div>
+  </div>
+</div>
 
 
 
