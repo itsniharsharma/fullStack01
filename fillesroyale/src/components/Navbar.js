@@ -7,6 +7,7 @@ export default function Navbar() {
   return (
     <div className='fullNavbar'>
 
+
 <nav className="navbar navbar-expand bg-body-tertiary">
   <div className="container-fluid">
 
@@ -38,22 +39,22 @@ export default function Navbar() {
             Collage Wear
           </Link>
           <ul className="dropdown-menu">
-            <li><Link className="dropdown-item" to="/">Action</Link></li>
-            <li><Link className="dropdown-item" to="/">Another action</Link></li>
+            <li><Link className="dropdown-item" to="/basics">Basics</Link></li>
+            <li><Link className="dropdown-item" to="/Trendy">Trendy</Link></li>
             <li><hr className="dropdown-divider"/></li>
-            <li><Link className="dropdown-item" to="/">Something else here</Link></li>
+            <li><Link className="dropdown-item" to="/OldMoney">OldMoney</Link></li>
           </ul>
         </li>
 
-        <li className="nav-item dropdown">
+        <li className="nav-item dropdown" >
           <Link className="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Hostal Wear
           </Link>
           <ul className="dropdown-menu">
-            <li><Link className="dropdown-item" to="/">Action</Link></li>
-            <li><Link className="dropdown-item" to="/">Another action</Link></li>
+            <li><Link className="dropdown-item" to="/Regular">Regular</Link></li>
+            <li><Link className="dropdown-item" to="/NightSuits">Night Suits</Link></li>
             <li><hr className="dropdown-divider"/></li>
-            <li><Link className="dropdown-item" to="/">Something else here</Link></li>
+            <li><Link className="dropdown-item" to="/LoungWear">Loung Wears</Link></li>
           </ul>
         </li>
 
@@ -115,7 +116,6 @@ export default function Navbar() {
     </div>
   </div>
 </nav>
-
     </div>
   )
 }
