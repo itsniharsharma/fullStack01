@@ -8,7 +8,7 @@ import car015 from '../img/car01img05.webp'
 export default function Carousel01() {
   return (
     <div className='carousel'>
-        <div id="carouselExampleInterval" className="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div id="carouselExampleInterval" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
   <div className="carousel-inner">
     <div className="carousel-item active" data-bs-interval="1000">
       <img src={car011} className="d-block w-100" alt="..."/>

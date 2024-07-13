@@ -1,0 +1,48 @@
+.changingHeading{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 100px 100px 100px;
+    caret-color: transparent;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.changingHeading h1{
+    /* gap: 10px; */
+}
+
+.changingHeading .fade {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .changingHeading .fadeIn {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+
+.cardSection{
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardSection .card01{
+    /* padding: 5px; */
+    /* border: 2px solid orange; */
+    padding-bottom: 60px;
+    padding-left: 2px;
+}
+
+.cardSection .card02{
+    /* padding: 5px; */
+    /* border: 2px solid black; */
+    padding-left: 2px;
+}
+
+

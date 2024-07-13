@@ -169,6 +169,33 @@
     caret-color: transparent;
   }
 
+  .bagIcon img{
+    height: 30px;
+    width: 30px;
+  }
+
+  .Navicons{
+    /* border: 2px solid blue; */
+    display: flex;
+    align-items: center;
+    
+  }
+
+.favorite{
+  /* border: 2px solid green; */
+  display: inline-block;
+  padding-right: 15px;
+  
+}
+
+.favorite img{
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+
   .Logns{
     /* border: 2px solid red; */
      display: flex;

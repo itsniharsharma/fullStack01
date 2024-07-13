@@ -1,6 +1,8 @@
 import React from 'react'
 import './Navbar.css'
 import logo from '../img/newShortLogoTop.png'
+import newfavsymb from '../img/newfavsymb.png'
+import newShopBag from '../img/newShopBag.png'
 import { Link } from 'react-router-dom'
 
 export default function Navbar() {
@@ -106,12 +108,19 @@ export default function Navbar() {
         <button className="btn btn-outline-dark" type="submit">Search</button>
       </form>
 
+      </div>
+
+
+      <div className='Navicons'>
+         <div className="favorite">
+               <img src={newfavsymb} alt="" />
+            </div>
       
             <div className="bagIcon">
-              <i className="fas fa-shopping-bag"></i>
+              {/* <i className="fas fa-shopping-bag"></i> */}
+              <img src={newShopBag} alt="" />
             </div>
-
-      </div>
+         </div>
      
     </div>
   </div>
