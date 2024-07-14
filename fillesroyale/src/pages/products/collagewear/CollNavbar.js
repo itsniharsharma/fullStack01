@@ -1,5 +1,8 @@
 import React from 'react'
-import logo from '../collagewear/CollagewearCSS/CollageWearImgs/newShortLogoTop.png'
+import logo from '../collagewear/CollagewearCSS/CollageWearImgs/pinkLogo.png'
+// import newfavsymb from '../collagewear/CollagewearCSS/CollageWearImgs/newfavsymb.png'
+import newShopBag from '../collagewear/CollagewearCSS/CollageWearImgs/newShopBag.png'
+
 import { Link } from 'react-router-dom'
 import '../collagewear/CollagewearCSS/CollNavbar.css'
 
@@ -26,7 +29,7 @@ export default function CollNavbar() {
 
       <Link className="navbar-brand" to="/"> 
         <img src={logo} />
-        <div className='BrandName'> Filles Royale </div>
+        <div className='BrandName h1'> Filles Royale </div>
      </Link>
 
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -83,12 +86,12 @@ export default function CollNavbar() {
           </ul>
         </li>
 
-        <div className='Logns'>
+         <div className='Logns'>
 
-        <li><Link className="nav-link active" aria-current="page" to="/login">Login</Link></li>
-        <li><Link className="nav-link active" aria-current="page" to="/signup">SignUp</Link></li>
+        {/* <li><Link className="nav-link active" aria-current="page" to="/login">Login</Link></li> */}
+        <li><Link className="nav-link active" aria-current="page" to="/Register">Register</Link></li>
 
-        </div>
+        </div> 
 
 
       </ul>
@@ -107,11 +110,17 @@ export default function CollNavbar() {
         <button className="btn btn-outline-dark" type="submit">Search</button>
       </form>
 
+      </div>
+
+      <div className='Navicons'>
+           <div className="favorite">
+               {/* <img src={newfavsymb} alt="" /> */}
+            </div>
       
             <div className="bagIcon">
-              <i className="fas fa-shopping-bag"></i>
+              {/* <i className="fas fa-shopping-bag"></i> */}
+              <img src={newShopBag} alt="" />
             </div>
-
       </div>
      
     </div>

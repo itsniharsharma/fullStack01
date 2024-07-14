@@ -80,6 +80,7 @@
     padding: 10px; /* Optional padding to ensure content is not too close to the edges */
     margin: 0; /* Remove any default margin */
     width: 100%; /* Ensure it takes up full width */
+    max-height: 185px;
   }
 
   .navbar-nav .dropdown-toggle::after {
@@ -105,9 +106,10 @@
     /* background-image: url('../img/img2.png') !important; Change logo for mobile */
      margin-right: 2px; /* Remove any default margin */
      /* border: 2px solid blue; */
-     border-radius: 200px;
-     height: 40px;
-     width: 50px;  
+     border-radius: 500px !important;
+     /* border: 2px solid black; */
+     height: 120px !important;
+     width: 120px !important;  
 
      caret-color: transparent;
     

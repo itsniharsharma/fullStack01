@@ -1,7 +1,7 @@
 import React from 'react'
 import './Navbar.css'
-import logo from '../img/newShortLogoTop.png'
-import newfavsymb from '../img/newfavsymb.png'
+import logo from '../img/pinkLogo.png'
+// import newfavsymb from '../img/newfavsymb.png'
 import newShopBag from '../img/newShopBag.png'
 import { Link } from 'react-router-dom'
 
@@ -27,7 +27,7 @@ export default function Navbar() {
 
       <Link className="navbar-brand" to="/"> 
         <img src={logo} />
-        <div className='BrandName'> Filles Royale </div>
+        <div className='BrandName h1'> Filles Royale </div>
      </Link>
 
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -84,12 +84,12 @@ export default function Navbar() {
           </ul>
         </li>
 
-        <div className='Logns'>
+         <div className='Logns'>
 
-        <li><Link className="nav-link active" aria-current="page" to="/login">Login</Link></li>
-        <li><Link className="nav-link active" aria-current="page" to="/signup">SignUp</Link></li>
+         {/* <li><Link className="nav-link active" aria-current="page" to="/login">Login</Link></li> */}
+        <li><Link className="nav-link active" aria-current="page" to="/Register">Register</Link></li> 
 
-        </div>
+        </div> 
 
 
       </ul>
@@ -112,15 +112,15 @@ export default function Navbar() {
 
 
       <div className='Navicons'>
-         <div className="favorite">
-               <img src={newfavsymb} alt="" />
+           <div className="favorite">
+               {/* <img src={newfavsymb} alt="" /> */}
             </div>
       
             <div className="bagIcon">
               {/* <i className="fas fa-shopping-bag"></i> */}
               <img src={newShopBag} alt="" />
             </div>
-         </div>
+      </div>
      
     </div>
   </div>

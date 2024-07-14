@@ -6,8 +6,8 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Login from './pages/Login/Login';
-import Signup from './pages/SignUp/Signup';
+// import Login from './pages/Login/Login';
+import Register from './pages/SignUp/Register';
 import Basics from './pages/products/collagewear/Basics';
 import Trendy from './pages/products/collagewear/Trendy';
 import OldMoney from './pages/products/collagewear/OldMoney';
@@ -23,8 +23,8 @@ function App() {
       <div>
         <Routes>
            <Route exact path="/" element={<Home/>} />
-           <Route exact path="/login" element={<Login/>}/>
-           <Route exact path="/SignUp" element={<Signup/>} />
+            {/* <Route exact path="/login" element={<Login/>}/> */}
+           <Route exact path="/Register" element={<Register/>} /> 
            
 
            <Route exact path="/Basics" element={<Basics/>}/>

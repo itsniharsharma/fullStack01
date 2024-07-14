@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Signup() {
+export default function Register() {
   return (
     <div>
       <section className="h-100" style={{backgroundColor:'rgb(252 211 219)'}}>
@@ -19,7 +19,7 @@ export default function Signup() {
                   </div>
                   <div className="col-xl-6">
                     <div className="card-body p-md-5 text-black">
-                      <h3 className="mb-5">Sign Up here</h3>
+                      <h3 className="mb-5">Register with us</h3>
 
                       <div className="row">
                         <div className="col-md-6 mb-4">
@@ -107,7 +107,7 @@ export default function Signup() {
 
                       <div className="d-flex justify-content-end pt-3">
                         <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-light btn-lg">Reset all</button>
-                        <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-dark btn-lg ms-2">Sign Up</button>
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-dark btn-lg ms-2">Register</button>
                       </div>
                     </div>
                   </div>
