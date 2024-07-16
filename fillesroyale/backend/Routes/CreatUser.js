@@ -1,8 +1,19 @@
 const express = require('express')
 const router = express.Router()
 const User = require('../models/User')
+
+
+const { body, validationResult } = require('express-validator');
+
 //wenever /createuser point hits, it puch below data in our database
-router.post("/creatuser", async(req, res)=>{  //await(request, response)
+router.post("/creatuser"
+   , async(req, res)=>{  //await(request, response)
+
+      const errors= validationResult(req);
+      if(!errors.isEmpty()){
+         return res.status(400).json({errors: errors.array()});
+      }
+
      try {
      
         const { FirstName, LastName, EnrollmentNumber, Hostel, DOB, Department, EmailId } = req.body;

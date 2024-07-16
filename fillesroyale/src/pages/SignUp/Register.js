@@ -1,10 +1,37 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 export default function Register() {
+
+  const [credentials, setcredentials] = useState({FirstName:"", LastName:"", EnrollmentNumber:"",Hostel:"",DOB:"",Department:"",EmailId:""});
+
+  const handleSubmit = async(e)=>{
+        e.preventDefault();
+        const response= await fetch("http://localhost:5000/api/creatuser",{
+          method:'POST',
+          headers:{
+            'Content-Type':'application/json'
+          },
+          body:JSON.stringify({FirstName:credentials.FirstName, LastName:credentials.LastName, EnrollmentNumber:credentials.EnrollmentNumber, Hostel:credentials.Hostel, DOB:credentials.DOB, Department:credentials.Department, EmailId:credentials.EmailId })
+        });
+
+        const json= await response.json();
+        console.log(json);
+
+        if(!json.success){
+          alert("enter valid credentials");
+        }
+  }
+
+  const onChange=(e)=>{
+     setcredentials({...credentials,[e.target.name]:e.target.value})
+  }
+
   return (
     <div>
       <section className="h-100" style={{backgroundColor:'rgb(252 211 219)'}}>
-        <div className="container py-5 h-100">
+         <form onSubmit={handleSubmit}>  
+
+         <div className="container py-5 h-100">
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col">
               <div className="card card-registration my-4">
@@ -24,13 +51,13 @@ export default function Register() {
                       <div className="row">
                         <div className="col-md-6 mb-4">
                           <div data-mdb-input-init className="form-outline">
-                            <input type="text" id="form3Example1m" className="form-control form-control-lg" />
+                            <input type="text" id="form3Example1m" className="form-control form-control-lg" name='FirstName' value={credentials.FirstName} onChange={onChange}/>
                             <label className="form-label" htmlFor="form3Example1m">First name</label>
                           </div>
                         </div>
                         <div className="col-md-6 mb-4">
                           <div data-mdb-input-init className="form-outline">
-                            <input type="text" id="form3Example1n" className="form-control form-control-lg" />
+                            <input type="text" id="form3Example1n" className="form-control form-control-lg" name='LastName' value={credentials.LastName} onChange={onChange}/>
                             <label className="form-label" htmlFor="form3Example1n">Last name</label>
                           </div>
                         </div>
@@ -39,14 +66,14 @@ export default function Register() {
                       <div className="row">
                         <div className="col-md-6 mb-4">
                           <div data-mdb-input-init className="form-outline">
-                            <input type="text" id="form3Example1n1" className="form-control form-control-lg" />
+                            <input type="text" id="form3Example1n1" className="form-control form-control-lg" name='EnrollmentNumber' value={credentials.EnrollmentNumber} onChange={onChange}/>
                             <label className="form-label" htmlFor="form3Example1n1">Enrollment Number</label>
                           </div>
                         </div>
                       </div>
 
                       <div data-mdb-input-init className="form-outline mb-4">
-                        <input type="text" id="form3Example8" className="form-control form-control-lg" />
+                        <input type="text" id="form3Example8" className="form-control form-control-lg" name='Hostel' value={credentials.Hostel} onChange={onChange}/>
                         <label className="form-label" htmlFor="form3Example8">Hostel</label>
                       </div>
 
@@ -54,7 +81,7 @@ export default function Register() {
                         <h6 className="mb-0 me-4">Gender: </h6>
 
                         <div className="form-check form-check-inline mb-0 me-4">
-                          <input className="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender" value="option1" checked/>
+                          <input className="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender" value="option1" checked onChange={onChange}/>
                           <label className="form-check-label" htmlFor="femaleGender">Female</label>
                         </div>
 
@@ -89,25 +116,25 @@ export default function Register() {
                       {/* </div> */}
 
                       <div data-mdb-input-init className="form-outline mb-4">
-                        <input type="text" id="form3Example9" className="form-control form-control-lg" />
+                        <input type="text" id="form3Example9" className="form-control form-control-lg" name='DOB' value={credentials.DOB} onChange={onChange}/>
                         <label className="form-label" htmlFor="form3Example9">DOB</label>
                       </div>
 
                      
 
                       <div data-mdb-input-init className="form-outline mb-4">
-                        <input type="text" id="form3Example99" className="form-control form-control-lg" />
+                        <input type="text" id="form3Example99" className="form-control form-control-lg" name='Department' value={credentials.Department} onChange={onChange}/>
                         <label className="form-label" htmlFor="form3Example99">Department</label>
                       </div>
 
                       <div data-mdb-input-init className="form-outline mb-4">
-                        <input type="text" id="form3Example97" className="form-control form-control-lg" />
+                        <input type="text" id="form3Example97" className="form-control form-control-lg"  name='EmailId' value={credentials.EmailId} onChange={onChange}/>
                         <label className="form-label" htmlFor="form3Example97">Email ID</label>
                       </div>
 
                       <div className="d-flex justify-content-end pt-3">
-                        <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-light btn-lg">Reset all</button>
-                        <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-dark btn-lg ms-2">Register</button>
+                        <button type="submit" data-mdb-button-init data-mdb-ripple-init className="btn btn-light btn-lg">Reset all</button>
+                        <button type="submit" data-mdb-button-init data-mdb-ripple-init className="btn btn-dark btn-lg ms-2">Register</button>
                       </div>
                     </div>
                   </div>
@@ -116,6 +143,8 @@ export default function Register() {
             </div>
           </div>
         </div>
+
+         </form>
       </section>
     </div>
   );
