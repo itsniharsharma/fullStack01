@@ -4,12 +4,26 @@ import Navbar from "../components/Navbar";
 import Carousel01 from "../components/Carousel01";
 import middleCarousel from "../img/BasicSampleCar.webp";
 import sampleCardImg01 from "../img/sampleCardImg01.webp";
+import sampleCardImg02 from "../img/sampleCardImg02.webp";
 import blockSectionimg01 from "../img/blockSectionimg01.webp";
 import blockSectionimg02 from "../img/blockSectionimg02.jpg";
 import longCardsimg01 from "../img/longCardsimg01.webp";
 import "../pages/Home.css";
+import Footer from "../components/Footer";
 
 export default function Home() {
+
+//---------------------------------------------------------------------
+
+const [cartItems, setCartItems] = useState(0);
+
+  const handleAddToCart = () => {
+    setCartItems(cartItems + 1);
+  };
+
+//----------------------------------------------------------------------
+
+
   //-------------------------------------------------------------------------
   const [text, setText] = useState("NOW IN TIET");
   const [fadeClass, setFadeClass] = useState("fadeIn");
@@ -275,9 +289,312 @@ export default function Home() {
           
 
       </div>
+
+
+
+
+
+
+
+      <div className="cardSection02">
+
+
+
+
+       <div>
+          <div className="card01" style={{ width: "18rem" }}>
+            <img src={sampleCardImg02} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+                
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="card02" style={{ width: "18rem" }}>
+            <img src={sampleCardImg01} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+               
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="card01" style={{ width: "18rem" }}>
+            <img src={sampleCardImg02} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+               
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="card02" style={{ width: "18rem" }}>
+            <img src={sampleCardImg01} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+               
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="card01" style={{ width: "18rem" }}>
+            <img src={sampleCardImg02} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+               
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+       
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <div className="cardSection03">
+
+
+
+
+       <div>
+          <div className="card01" style={{ width: "18rem" }}>
+            <img src={sampleCardImg01} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+                
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="card02" style={{ width: "18rem" }}>
+            <img src={sampleCardImg02} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+               
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="card01" style={{ width: "18rem" }}>
+            <img src={sampleCardImg01} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+               
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="card02" style={{ width: "18rem" }}>
+            <img src={sampleCardImg02} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+               
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="card01" style={{ width: "18rem" }}>
+            <img src={sampleCardImg01} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+               
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+       
+
+      </div>
+
+
+
+
+
+
+
+
+      <div className="cardSection04">
+
+
+
+
+       <div>
+          <div className="card01" style={{ width: "18rem" }}>
+            <img src={sampleCardImg02} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+                
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="card02" style={{ width: "18rem" }}>
+            <img src={sampleCardImg01} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+               
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="card01" style={{ width: "18rem" }}>
+            <img src={sampleCardImg02} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+               
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="card02" style={{ width: "18rem" }}>
+            <img src={sampleCardImg01} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+               
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="card01" style={{ width: "18rem" }}>
+            <img src={sampleCardImg02} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+               
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+       
+
+      </div>
+
+
+
+
+
+
+
+
+
+      <div className="cardSection05">
+
+
+
+
+       <div>
+          <div className="card01" style={{ width: "18rem" }}>
+            <img src={sampleCardImg01} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+                
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="card02" style={{ width: "18rem" }}>
+            <img src={sampleCardImg02} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+               
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="card01" style={{ width: "18rem" }}>
+            <img src={sampleCardImg01} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+               
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="card02" style={{ width: "18rem" }}>
+            <img src={sampleCardImg02} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+               
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="card01" style={{ width: "18rem" }}>
+            <img src={sampleCardImg01} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+               
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+       
+
+      </div>
+
+
+
+
+
+
+
       
-
-
+     
+     <Footer/>
+          
     </div>
   );
 }

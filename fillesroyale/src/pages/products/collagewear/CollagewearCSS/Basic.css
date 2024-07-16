@@ -19,5 +19,12 @@
     height: 100%;
     object-fit: cover; /* Ensure the image covers the whole div without distorting */
   }
+
+  .BasicBuyBtn01{
+    background-color:  rgb(252, 211, 219);
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+  }
   
   

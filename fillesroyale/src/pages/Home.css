@@ -116,3 +116,119 @@
     margin: 10px;
     gap: 1px;
 }
+
+
+
+
+/* CartBag css is here itself */
+
+.bagIcon {
+    position: relative;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+  }
+
+
+  .cardSection02{
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+  }
+
+  .cardSection02 .card01{
+    /* padding: 5px; */
+    /* border: 2px solid orange; */
+    /* padding-bottom: 60px;
+    padding-left: 2px; */
+    padding: 5px;
+}
+
+.cardSection02 .card02{
+    /* padding: 5px; */
+    /* border: 2px solid black; */
+    /* padding-left: 2px; */
+}
+
+
+
+.cardSection03{
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 10px; */
+  }
+
+  .cardSection03 .card01{
+    /* padding: 5px; */
+    /* border: 2px solid orange; */
+    /* padding-bottom: 60px;
+    padding-left: 2px; */
+}
+
+.cardSection03 .card02{
+    /* padding: 5px; */
+    /* border: 2px solid black; */
+    /* padding-left: 2px; */
+    padding: 5px;
+}
+
+
+.cardSection04{
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 10px; */
+  }
+
+  .cardSection04 .card01{
+    /* padding: 5px; */
+    /* border: 2px solid orange; */
+    /* padding-bottom: 60px;
+    padding-left: 2px; */
+}
+
+.cardSection04 .card02{
+    /* padding: 5px; */
+    /* border: 2px solid black; */
+    /* padding-left: 2px; */
+    padding: 5px;
+}
+
+
+
+
+
+.cardSection05{
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 10px; */
+  }
+
+  .cardSection05 .card01{
+    /* padding: 5px; */
+    /* border: 2px solid orange; */
+    /* padding-bottom: 60px;
+    padding-left: 2px; */
+}
+
+.cardSection05 .card02{
+    /* padding: 5px; */
+    /* border: 2px solid black; */
+    /* padding-left: 2px; */
+    padding: 5px;
+}

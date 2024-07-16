@@ -19,43 +19,47 @@
 
 // module.exports=mongoDB;  //since we are not calling it, we are importing it, we havnt used ();
 
+//since MONGOOSE.prototype, nolonger accepts callback, we have to use await and promise method
 
+const mongoose = require("mongoose"); // from mongoosejs.com                           //see here
+const mongoURI =
+  "mongodb+srv://fillesroyale:Aabb123456aab@cluster0.6ez4pum.mongodb.net/fillesroyale?retryWrites=true&w=majority&appName=Cluster0"; // stored url in a const
+// have to add database name fillesroyale
 
+const mongoDB = () => {
+  mongoose.connect(mongoURI)
+    .then(async () => {
+      console.log("Connected to MongoDB :)");
 
+      // Access the database
+      const db = mongoose.connection.db;
+      console.log(`Database Name: ${db.databaseName}`);
 
+      // List all collections in the database
+      const collections = await db.listCollections().toArray();
+      console.log("Collections:", collections);
 
+      // Check if the collection exists
+      const collectionExists = collections.some(
+        (collection) => collection.name === "userData01"
+      );
+      if (!collectionExists) {
+        console.error("Collection userData01 does not exist");
+        return;
+      }
 
-//since MONGOOSE.prototype, nolonger accepts callback, we have to use await and promise method 
+      // Fetch data from the collection
+      const fetched_data = db.collection("userData01");
+      const data = await fetched_data.find({}).toArray();
+      console.log("Fetched Data:", data);
 
-
-
-
-
-
-
-
-
-const mongoose = require('mongoose');  // from mongoosejs.com                           //see here
-const mongoURI = 'mongodb+srv://fillesroyale:Aabb123456aab@cluster0.6ez4pum.mongodb.net/fillesroyale?retryWrites=true&w=majority&appName=Cluster0'; // stored url in a const
-                                                                                      // have to add database name fillesroyale
-const mongoDB = () => {  
-    mongoose.connect(mongoURI)
-        .then(async() => {
-            console.log('connected :)');
-
-            //now here we will continue our story
-            //we will fetch data from our database
-            
-
-            const fetched_data =await mongoose.connection.db.collection("userData01") //most important line, to fetch data, since we using async fun, we must use await
-            fetched_data.find({}).toArray(function(err, data){   //({}) cauz we fetching all data, and storingit in array
-                if(err) console.log(err);
-                else console.log(data);
-            });
-        })
-        .catch((error) => {
-            console.error('Failed to connect to MongoDB', error);
-        });
+      if (data.length === 0) {
+        console.log("No data found in the collection");
+      }
+    })
+    .catch((error) => {
+      console.error("Failed to connect to MongoDB", error);
+    });
 };
 
-module.exports = mongoDB;  // since we are not calling it, we are importing it, we haven't used ();
+module.exports = mongoDB; // since we are not calling it, we are importing it, we haven't used ();

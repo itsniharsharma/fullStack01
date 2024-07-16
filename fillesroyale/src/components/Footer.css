@@ -1,0 +1,11 @@
+.footerLogo{
+   /* border: 2px solid black; */
+}
+
+.footerLogo img{
+    /* border: 2px solid red; */
+    height: 110px;
+    width: 110px;
+    border-radius: 100%;
+    /* margin-right: 20px; */
+}

@@ -14,6 +14,7 @@ import OldMoney from './pages/products/collagewear/OldMoney';
 import Regular from './pages/products/hostelwear/Regular';
 import NightSuite from './pages/products/hostelwear/NightSuite';
 import LoungWear from './pages/products/hostelwear/LoungWear';
+import CartBag from './pages/CartBag/CartBag';
 
 
 
@@ -34,6 +35,8 @@ function App() {
            <Route exact path="/Regular" element={<Regular/>}/>
            <Route exact path="/NightSuites" element={<NightSuite/>}/>
            <Route exact path="/LoungWear" element={<LoungWear/>}/>
+
+           <Route exact path="/CartBag" element={<CartBag/>}/>
          </Routes>
       </div>
     </Router>
