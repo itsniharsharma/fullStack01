@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 // import Login from './pages/Login/Login';
 import Register from './pages/SignUp/Register';
-import Basics from './pages/products/collagewear/Basics';
+import Basics from './pages/products/collagewear/Basics/Basics';
 import Trendy from './pages/products/collagewear/Trendy';
 import OldMoney from './pages/products/collagewear/OldMoney';
 import Regular from './pages/products/hostelwear/Regular';
